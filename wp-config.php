@@ -74,6 +74,8 @@ $table_prefix  = 'wp_';
  * in their development environments.
  */
 define('WP_DEBUG', false);
+//do this for https RNH
+if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == "https") $_SERVER['HTTPS']="on";
 
 /* That's all, stop editing! Happy blogging. */
 
